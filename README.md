@@ -1,2 +1,2 @@
-This example shows how to build a simple digital wayfinding service using the [jQuery wayfinding plugin](http://keith-wood.name/svg.html).
-The plugin has been customized to permit the correct interaction with the zoom environment provided by the [D3.js](http://d3js.org) library
+Дипломный проект 2024, бакалавриат ИТиАС
+Прототип навигатора по помещениям университета на основе плагина jQuery : https://github.com/ucdavis/wayfinding.
