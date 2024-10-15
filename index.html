@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Гид по ВУЗу</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="Styles.css">
+	<link rel="icon" type="image/x-icon" href="https://tabiturient.ru/logovuz/sibsiu.png">
+</head>
+<body style="font-size: 10pt" class="wrapper" >
+<div>
+	<header class="container"> <!-- Шапка сайта (лого, ссылка на мудл, поисковая строка)-->
+		<nav >
+			<ul>
+				<img src=" https://tabiturient.ru/logovuz/sibsiu.png" width="14%" alt="Лого сибгиу" >
+				<li> <a  href="https://do.sibsiu.ru/day/" target="_blank"> <img src="https://cdn.iconscout.com/icon/free/png-512/moodle-2-569555.png" width="30px">  </a> </li>
+				<li> <p  title="Гид по СИБГИУ"> Гид по ВУЗу</p> </li>
+			</ul>
+		</nav>
+	</header>
+	<!-- Ниже панель ввода пунктов А и Б и кнопка "в путь" -->
+	<div class="road-construct placeholder-form">
+		<ul id="input-export">
+			<li><div class="placeholder-container"> <input  type="text" placeholder=" " id="input1"> <label>Пункт А...</label> </div></li>
+			<li><div class="placeholder-container"> <input  type="text" placeholder=" " id="input2">  <label>Пункт Б...</label></div></li>
+			<li> <button > В путь!	 </button></li>
+		</ul>
+	</div>
+
+	<div class="floor-select  " id="buttons">
+		<ul >
+			<li ><button  id="floor1" >1</button> </li>
+			<li ><button id="floor2"> 2</button> </li>
+			<li><button>3 </button> </li>
+			<li><button>4 </button> </li>
+			<li><button> 5</button> </li>
+		</ul>
+	</div>
+	<div id="content" class="container">
+		<div id="mapLoading">Загрузка</div>
+		<div id="myMaps" class="Map" ></div>
+		<div id="controls">
+			<label for="beginSelect">Начало маршрута:</label>
+			<select id="beginSelect">
+				<option value="Entrance">Вход</option>
+				<option value="101">101</option>
+				<option value="102">102</option>
+				<option value="103">103</option>
+				<option value="104">104</option>
+				<option value="105">105</option>
+				<option value="106">106</option>
+				<option value="109">109</option>
+				<option value="109а">109а</option>
+				<option value="111">111</option>
+				<option value="112">112</option>
+				<option value="113">113</option>
+				<option value="114">114</option>
+				<option value="116">116</option>
+				<option value="117">117</option>
+				<option value="118">118</option>
+				<option value="119">119</option>
+				<option value="121">121</option>
+				<option value="122">122</option>
+				<option value="123">123</option>
+				<option value="Гардероб">Гардероб</option>
+				<option value="132">132</option>
+				<option value="132а">132а</option>
+				<option value="133а">133а</option>
+				<option value="135">135</option>
+				<option value="135а">135а</option>
+				<option value="135б">135б</option>
+				<option value="136">136</option>
+				<option value="137">137</option>
+				<option value="138">138</option>
+				<option value="138а">138а</option>
+				<option value="139">139</option>
+				<option value="143">143</option>
+				<option value="140">140</option>
+				<option value="140а">140а</option>
+				<option value="141">141</option>
+				<option value="142">142</option>
+				<option value="145">145</option>
+				<option value="144">144</option>
+				<option value="201">201</option>
+				<option value="202">203</option>
+				<option value="204">204</option>
+				<option value="205">205</option>
+				<option value="206">206</option>
+				<option value="206а">206а</option>
+				<option value="207">207</option>
+				<option value="207а">207а</option>
+				<option value="208">208</option>
+				<option value="209">209</option>
+				<option value="210">210</option>
+				<option value="211">211</option>
+				<option value="211а">211а</option>
+				<option value="212">212</option>
+				<option value="213">213</option>
+				<option value="213а">213а</option>
+				<option value="214">214</option>
+				<option value="215">215</option>
+				<option value="216">216</option>
+				<option value="217">217</option>
+				<option value="217а">217а</option>
+				<option value="218">218</option>
+				<option value="219">219</option>
+				<option value="220">220</option>
+				<option value="221">221</option>
+				<option value="222">222</option>
+				<option value="223">223</option>
+				<option value="224">224</option>
+				<option value="226">226</option>
+				<option value="228">228</option>
+				<option value="229">229</option>
+				<option value="232">232</option>
+				<option value="235">235</option>
+				<option value="230">230</option>
+				<option value="Музей">Музей</option>
+				<option value="238">238</option>
+				<option value="239">239</option>
+				<option value="240">240</option>
+				<option value="241">241</option>
+				<option value="242">242</option>
+				<option value="243">243</option>
+				<option value="244">244</option>
+				<option value="245">245</option>
+				<option value="246">246</option>
+				<option value="247">247</option>
+				<option value="248">248</option>
+				<option value="249">249</option>
+				<option value="250">250</option>
+				<option value="251">251</option>
+				<option value="252">252</option>
+				<option value="253">253</option>
+				<option value="254">254</option>
+				<option value="255">255</option>
+				<option value="256">256</option>
+				<option value="257">257</option>
+				<option value="258">258</option>
+				<option value="259">259</option>
+				<option value="260">260</option>
+				<option value="261">261</option>
+				<option value="262">262</option>
+				<option value="262а">262а</option>
+				<option value="263">263</option>
+				<option value="264">264</option>
+				<option value="265">265</option>
+				<option value="268">268</option>
+				<option value="269">269</option>
+				<option value="270">270</option>
+				<option value="271">271</option>
+				<option value="272">272</option>
+				<option value="273">273</option>
+				<option value="274">274</option>
+				<option value="275">275</option>
+				<option value="276">276</option>
+				<option value="277">277</option>
+				<option value="278">278</option>
+				<option value="Столовая">Столовая</option>
+			</select>
+			<label for="endSelect">Конец маршрута</label>
+			<select id="endSelect">
+				<option value="Entrance">Вход</option>
+				<option value="101">101</option>
+				<option value="102">102</option>
+				<option value="103">103</option>
+				<option value="104">104</option>
+				<option value="105">105</option>
+				<option value="106">106</option>
+				<option value="109">109</option>
+				<option value="109а">109а</option>
+				<option value="111">111</option>
+				<option value="112">112</option>
+				<option value="113">113</option>
+				<option value="114">114</option>
+				<option value="116">116</option>
+				<option value="117">117</option>
+				<option value="118">118</option>
+				<option value="119">119</option>
+				<option value="121">121</option>
+				<option value="122">122</option>
+				<option value="123">123</option>
+				<option value="Гардероб">Гардероб</option>
+				<option value="132">132</option>
+				<option value="132а">132а</option>
+				<option value="133а">133а</option>
+				<option value="135">135</option>
+				<option value="135а">135а</option>
+				<option value="135б">135б</option>
+				<option value="136">136</option>
+				<option value="137">137</option>
+				<option value="138">138</option>
+				<option value="138а">138а</option>
+				<option value="139">139</option>
+				<option value="143">143</option>
+				<option value="140">140</option>
+				<option value="140а">140а</option>
+				<option value="141">141</option>
+				<option value="142">142</option>
+				<option value="145">145</option>
+				<option value="144">144</option>
+				<option value="201">201</option>
+				<option value="202">203</option>
+				<option value="204">204</option>
+				<option value="205">205</option>
+				<option value="206">206</option>
+				<option value="206а">206а</option>
+				<option value="207">207</option>
+				<option value="207а">207а</option>
+				<option value="208">208</option>
+				<option value="209">209</option>
+				<option value="210">210</option>
+				<option value="211">211</option>
+				<option value="211а">211а</option>
+				<option value="212">212</option>
+				<option value="213">213</option>
+				<option value="213а">213а</option>
+				<option value="214">214</option>
+				<option value="215">215</option>
+				<option value="216">216</option>
+				<option value="217">217</option>
+				<option value="217а">217а</option>
+				<option value="218">218</option>
+				<option value="219">219</option>
+				<option value="220">220</option>
+				<option value="221">221</option>
+				<option value="222">222</option>
+				<option value="223">223</option>
+				<option value="224">224</option>
+				<option value="226">226</option>
+				<option value="228">228</option>
+				<option value="229">229</option>
+				<option value="232">232</option>
+				<option value="235">235</option>
+				<option value="230">230</option>
+				<option value="Музей">Музей</option>
+				<option value="238">238</option>
+				<option value="239">239</option>
+				<option value="240">240</option>
+				<option value="241">241</option>
+				<option value="242">242</option>
+				<option value="243">243</option>
+				<option value="244">244</option>
+				<option value="245">245</option>
+				<option value="246">246</option>
+				<option value="247">247</option>
+				<option value="248">248</option>
+				<option value="249">249</option>
+				<option value="250">250</option>
+				<option value="251">251</option>
+				<option value="252">252</option>
+				<option value="253">253</option>
+				<option value="254">254</option>
+				<option value="255">255</option>
+				<option value="256">256</option>
+				<option value="257">257</option>
+				<option value="258">258</option>
+				<option value="259">259</option>
+				<option value="260">260</option>
+				<option value="261">261</option>
+				<option value="262">262</option>
+				<option value="262а">262а</option>
+				<option value="263">263</option>
+				<option value="264">264</option>
+				<option value="265">265</option>
+				<option value="268">268</option>
+				<option value="269">269</option>
+				<option value="270">270</option>
+				<option value="271">271</option>
+				<option value="272">272</option>
+				<option value="273">273</option>
+				<option value="274">274</option>
+				<option value="275">275</option>
+				<option value="276">276</option>
+				<option value="277">277</option>
+				<option value="278">278</option>
+				<option value="Столовая">Столовая</option>
+
+			</select>
+
+		</div>
+	</div>
+
+	<!--Таблица расписания-->
+	<table border="1" width="400px" height="200">
+		<thead>
+		<tr>
+			<th> 1 смена </th>
+			<th> 2 смена </th>
+			<th> 3 смена</th>
+		</tr>
+		</thead>
+
+		<tbody align="center">
+		<tr>
+			<td><b>1.</b> 8:30-9:50 </td>
+			<td> <b>4.</b>	13:50-15:20</td>
+			<td> <b>7.</b>	18:00-19:30 </td>
+		</tr>
+
+		<tr>
+			<td><b>2.</b>	10:00-11:30 </td>
+			<td> <b>5.</b>	15:30-17:00</td>
+			<td> <b>8.</b>	19:35-21:05</td>
+		</tr>
+
+		<tr>
+			<td><b>3.</b>	12:00-13:30 </td>
+			<td> <b>6.</b>	17:10-18:40</td>
+		</tr>
+		</tbody>
+
+	</table>
+	<!-- -->
+</div>
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+
+	<script src="Wayfinder.js"> </script>
+
+	<script>
+
+
+		// Variables for wayfinding
+		var MAPS = [
+
+					{'path': 'floorplan.svg', 'id': 'floor1'},
+					{'path': 'floorplan2.svg', 'id': 'floor2'}
+
+				];
+		var START_ROOM = 'Entrance';
+		var DEFAULT_MAP = 'floor1';
+
+				
+
+		//Setup options for wayfinding
+		$(document).ready(function () {
+			'use strict';
+			$('#myMaps').wayfinding({
+				'maps': MAPS,
+				'path': {
+					width: 3,
+					color: 'cyan',
+					radius: 8,
+					speed: 8
+				},
+				'startpoint': function () {
+					return START_ROOM;
+				},
+				'defaultMap': DEFAULT_MAP
+			});
+
+			//Переключение между этажами
+
+			$("#buttons button").click(function () {
+				$("#myMaps").wayfinding('currentMap',$(this).attr('id'));
+			});
+			//кнопка начало маршрута
+			$('#controls #beginSelect').change(function () {
+				$('#myMaps').wayfinding('startpoint', $(this).val());
+				if ($('#controls .endSelect').val() !== '') {
+					$('#myMaps').wayfinding('routeTo', $('#controls #endSelect').val());
+				}
+			});
+			//Кнопка конец маршрута
+			$('#controls #endSelect').change(function () {
+				$('#myMaps').wayfinding('routeTo', $(this).val());
+			});
+			//кнопка для извлечения информации о точках отправления и назначения из полей ввода
+			$("#input-export button").click(function () {
+				$('#myMaps').wayfinding('startpoint', $('#input1').val());
+				$('#myMaps').wayfinding('routeTo', $('#input2').val());
+			});
+
+			$('#controls #accessible').change(function () {
+				if ($('#controls #accessible:checked').val() !== undefined) {
+					$('#myMaps').wayfinding('accessibleRoute', true);
+				} else {
+					$('#myMaps').wayfinding('accessibleRoute', false);
+				}
+				$('#myMaps').wayfinding('routeTo', $('#controls #endSelect').val());
+			});
+
+
+
+		});
+</script>
+</body>
+</html>
